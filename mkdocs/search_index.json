@@ -1,0 +1,19 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to AutolabJS\n\n\nThis doc is managed by \nAutolabJS\n.\n\n\nCurrent Projects\n\n\n\n\nAutolabJS\n\n\nAutolabCLI\n\n\nAutolabWebsite\n\n\ndocs", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-autolabjs", 
+            "text": "This doc is managed by  AutolabJS .", 
+            "title": "Welcome to AutolabJS"
+        }, 
+        {
+            "location": "/#current-projects", 
+            "text": "AutolabJS  AutolabCLI  AutolabWebsite  docs", 
+            "title": "Current Projects"
+        }
+    ]
+}
