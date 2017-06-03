@@ -1,2 +1,22 @@
 site_name: AutolabJS
-theme: readthedocs
+theme: 'material'
+pages:
+  - Home: 'index.md'
+  - AutolabJS:
+    - Home:  'AutolabJS.md'
+    - AutolabJS v0.1.0: 'AutolabJS-v010.md'
+    - AutolabJS v0.2.0:
+      - Home: 'AutolabJS-v020.md'
+      - Deployment-on-Single-Machine: 'AutolabJS-v020-Deployment-on-Single-Machine.md'
+  - AutolabCLI: 'autolabcli.md'
+  - Documentation: 'docs.md'
+  - AutolabWebsite: 'website.md'
+extra:
+  palette:
+    primary: 'blue'
+    accent: 'light blue'
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/AutolabJS'
