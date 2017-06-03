@@ -14,6 +14,86 @@
             "location": "/#current-projects", 
             "text": "AutolabJS  AutolabCLI  AutolabWebsite  docs", 
             "title": "Current Projects"
+        }, 
+        {
+            "location": "/AutolabJS/", 
+            "text": "Home\n\n\nWelcome to the AutolabJS wiki!\n\n\nUse the navigation sidebar to get to the page of interest.\n\n\nWant to contribute?, you are highly welcome. But, please follow the \ncoding standards\n before you submit a pull request.\n\n\nContributors\n\n\nThis project benefited from contributions of the following developers. The names are given in alphabetical order.\n\n\nAnkshit Jain, Gaurav Narula, Kashyap Gajera, Prasad Talasila, Rajat Agarwal, Tejas Sangol, Utkarsh Maheshwari, Vinamra Bhatia, Yash Singh\n\n\nFor more details, please see the \ncontributors graph", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/AutolabJS/#home", 
+            "text": "Welcome to the AutolabJS wiki!  Use the navigation sidebar to get to the page of interest.  Want to contribute?, you are highly welcome. But, please follow the  coding standards  before you submit a pull request.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/AutolabJS/#contributors", 
+            "text": "This project benefited from contributions of the following developers. The names are given in alphabetical order.  Ankshit Jain, Gaurav Narula, Kashyap Gajera, Prasad Talasila, Rajat Agarwal, Tejas Sangol, Utkarsh Maheshwari, Vinamra Bhatia, Yash Singh  For more details, please see the  contributors graph", 
+            "title": "Contributors"
+        }, 
+        {
+            "location": "/AutolabJS-v010/", 
+            "text": "", 
+            "title": "AutolabJS v0.1.0"
+        }, 
+        {
+            "location": "/AutolabJS-v020/", 
+            "text": "AutolabJS v0.2.0 Documentation\n\n\nDeployment Tutorial\n\n\n\n\nInstall Autolab - \nOn single machine\n, On two machines, On Azure cloud\n\n\nContainer Maintenance\n\n\nJSON details\n\n\nUninstall AutolabJS\n\n\nFAQ - Student, Instructor, Administrator\n\n\n\n\nTutorials for Lab Authors\n\n\n\n\nUsing AutolabJS - Initial Configuration\n\n\nCreating a Lab\n\n\nManage Course\n\n\n\n\nTutorials for Students\n\n\n\n\nMaking a Submission\n\n\nPost lab self evaluation", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/AutolabJS-v020/#autolabjs-v020-documentation", 
+            "text": "", 
+            "title": "AutolabJS v0.2.0 Documentation"
+        }, 
+        {
+            "location": "/AutolabJS-v020/#deployment-tutorial", 
+            "text": "Install Autolab -  On single machine , On two machines, On Azure cloud  Container Maintenance  JSON details  Uninstall AutolabJS  FAQ - Student, Instructor, Administrator", 
+            "title": "Deployment Tutorial"
+        }, 
+        {
+            "location": "/AutolabJS-v020/#tutorials-for-lab-authors", 
+            "text": "Using AutolabJS - Initial Configuration  Creating a Lab  Manage Course", 
+            "title": "Tutorials for Lab Authors"
+        }, 
+        {
+            "location": "/AutolabJS-v020/#tutorials-for-students", 
+            "text": "Making a Submission  Post lab self evaluation", 
+            "title": "Tutorials for Students"
+        }, 
+        {
+            "location": "/AutolabJS-v020-Deployment-on-Single-Machine/", 
+            "text": "v0.2.0 Deployment on Single Machine\n\n\nPrerequisite\n\n\n\n\nUbuntu server 16.04 operating system.\n\n\n\n\nRecord the IP Address / domain name of the machine. If your machine has multiple IP addresses, please use the public IP address for installation purposes. Because of ease of use, domain name (DNS) is a preferred option for hostname in all the configuration files.\nMost likely, your machine may be on a corporate private network with a gateway / proxy server / firewall connection to Internet. In that case, please use your machine's private ip address.\nYou can locate the configured IP address of your machine using the following command.\n    \nip addr show\n\n    in the displayed output, look for IP address following the \ninet\n keyword.\n\n\n\n\n\n\nChange the listening port of SSH server to 2222 in \n/etc/ssh/sshd_config\n file and restart the SSH server using the following command.\n\n\nsudo service ssh restart\n\nIf the SSH server is not running on your machine, please ignore the rest of this section and directly go to \nInstallation\n section.\n\n\n\n\nFor the SSH setting to be fully effective, logout of the current SSH session and relogin.\n\n\n\n\nInstallation\n\n\n\n\n\n\nClone Repository\n\n\ngit clone https://github.com/AutolabJS/AutolabJS.git\n\n\n\n\n\n\nChange to deploy directory\n\n\ncd AutolabJS/deploy\n\n\n\n\n\n\nExecute setup script\n\n\n./setup.sh\n\n\n\n\n\n\nConfigure the AutolabJS components by editing the configuration files in \ndeploy/configs/\ncomponent\n. Note that you need to use \nlocalhost\n for IP address of the machines wherever required. Unless you have special requirements, you can use the default host(name) and port numbers.\n\nThe list of configuration files to be changed are:\n\n\ndeploy/configs/main_server:\n APIKeys.json, conf.json, courses.json, labs.json\n\n\ndeploy/configs/load_balancer:\n nodes_data_conf.json\n\n\ndeploy/configs/execution_nodes:\n scores.json, conf.json  \n\n\n\n\n\n\nDo remember to change the default passwords in both the inventory file (\nAutolabJS/deploy/inventory\n) and in the configuration files. Please make sure that the changed passwords match in both the inventory file and the configuration files.\nThe locations of credentials are:  \n\n\n\n\n\n\n\n\nFile\n\n\nMySQL\n\n\nGitLab\n\n\nMain Server\n\n\n\n\n\n\n\n\n\n\ndeploy/inventory\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\n\n\ndeploy/configs/main_server/APIKeys.json\n\n\n\n\n\n\n\u2714 (for /admin route)\n\n\n\n\n\n\ndeploy/configs/main_server/conf.json\n\n\n\u2714\n\n\n\u2714\n\n\n\n\n\n\n\n\ndeploy/configs/load_balancer/nodes_data_conf.json\n\n\n\u2714\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the \ngitlab\n section of inventory file, change the hostname of \ngitlab\n item from \nlocalhost\n to \nMachine IP / domain name\n. If the machine has multiple IP addresses, then please use the public IP address. The line should look like\n\n    ```\n\n\n[gitlab]    \n\n\n ansible_connection=local ansible_python_interpreter=/usr/bin/python2 gitlab_password=\n\n\n```\n\n\n\n\n\n\nRun the ansible-playbook:\n\n\nsudo ansible-playbook -i inventory playbook-single.yml\n\nThe username and the password to be provided are the credentials of root user (or sudoer) of the machine.\n\n\n\n\n\n\nAnsible installs all the components of AutolabJS. If the previous step executes successfully, the \ninstallation is complete\n.\n\n\n\n\n\n\nAdd cron job to restart the AutolabJS components automatically.\n\n\n\n\nLogin as root\n\n\nsudo su\n\n\nCopy restart script to root account\n\n\ncp deploy/autolab-restart.sh /root/\n\n\nOpen crontab editor as root user\n\n\ncrontab -e\n\n\nEnter a job in the file to run the restart script every minute.\n\n\n* * * * * bash /root/autolab-restart.sh\n\n\n\n\n\n\n\n\nIn case of installation failure due to incorrect configuration, please see the FAQ page to see if you can resolve the error. If not, you can run the following commands to uninstall AutolabJS.\n\n\n\n\n\n\nThe uninstall command is:\n\n\nsudo ansible-playbook -i inventory uninstall.yml\n\n    The username and the password to be provided are the credentials of root user (or sudoer) of the machine.\n\n\n\n\n\n\nRemove the previously generated SSH keys\n\n\nrm -f AutolabJS/deploy/keys/main_server/*\n\n\nrm -f AutolabJS/deploy/keys/load_balancer/id_rsa*\n  \n\n\n\n\n\n\nRepeat the installation step-(7) given above to install AutolabJS again.\n\n\n\n\n\n\n\n\n\n\nInstallation creates containers for main server, load balancer, execution node, data base and Gitlab. For further information on managing these containers see \ncontainer maintenance\n page.", 
+            "title": "Deployment-on-Single-Machine"
+        }, 
+        {
+            "location": "/AutolabJS-v020-Deployment-on-Single-Machine/#v020-deployment-on-single-machine", 
+            "text": "", 
+            "title": "v0.2.0 Deployment on Single Machine"
+        }, 
+        {
+            "location": "/AutolabJS-v020-Deployment-on-Single-Machine/#prerequisite", 
+            "text": "Ubuntu server 16.04 operating system.   Record the IP Address / domain name of the machine. If your machine has multiple IP addresses, please use the public IP address for installation purposes. Because of ease of use, domain name (DNS) is a preferred option for hostname in all the configuration files.\nMost likely, your machine may be on a corporate private network with a gateway / proxy server / firewall connection to Internet. In that case, please use your machine's private ip address.\nYou can locate the configured IP address of your machine using the following command.\n     ip addr show \n    in the displayed output, look for IP address following the  inet  keyword.    Change the listening port of SSH server to 2222 in  /etc/ssh/sshd_config  file and restart the SSH server using the following command.  sudo service ssh restart \nIf the SSH server is not running on your machine, please ignore the rest of this section and directly go to  Installation  section.   For the SSH setting to be fully effective, logout of the current SSH session and relogin.", 
+            "title": "Prerequisite"
+        }, 
+        {
+            "location": "/AutolabJS-v020-Deployment-on-Single-Machine/#installation", 
+            "text": "Clone Repository  git clone https://github.com/AutolabJS/AutolabJS.git    Change to deploy directory  cd AutolabJS/deploy    Execute setup script  ./setup.sh    Configure the AutolabJS components by editing the configuration files in  deploy/configs/ component . Note that you need to use  localhost  for IP address of the machines wherever required. Unless you have special requirements, you can use the default host(name) and port numbers. \nThe list of configuration files to be changed are:  deploy/configs/main_server:  APIKeys.json, conf.json, courses.json, labs.json  deploy/configs/load_balancer:  nodes_data_conf.json  deploy/configs/execution_nodes:  scores.json, conf.json      Do remember to change the default passwords in both the inventory file ( AutolabJS/deploy/inventory ) and in the configuration files. Please make sure that the changed passwords match in both the inventory file and the configuration files.\nThe locations of credentials are:       File  MySQL  GitLab  Main Server      deploy/inventory  \u2714  \u2714     deploy/configs/main_server/APIKeys.json    \u2714 (for /admin route)    deploy/configs/main_server/conf.json  \u2714  \u2714     deploy/configs/load_balancer/nodes_data_conf.json  \u2714         In the  gitlab  section of inventory file, change the hostname of  gitlab  item from  localhost  to  Machine IP / domain name . If the machine has multiple IP addresses, then please use the public IP address. The line should look like \n    ```  [gitlab]       ansible_connection=local ansible_python_interpreter=/usr/bin/python2 gitlab_password=  ```    Run the ansible-playbook:  sudo ansible-playbook -i inventory playbook-single.yml \nThe username and the password to be provided are the credentials of root user (or sudoer) of the machine.    Ansible installs all the components of AutolabJS. If the previous step executes successfully, the  installation is complete .    Add cron job to restart the AutolabJS components automatically.   Login as root  sudo su  Copy restart script to root account  cp deploy/autolab-restart.sh /root/  Open crontab editor as root user  crontab -e  Enter a job in the file to run the restart script every minute.  * * * * * bash /root/autolab-restart.sh     In case of installation failure due to incorrect configuration, please see the FAQ page to see if you can resolve the error. If not, you can run the following commands to uninstall AutolabJS.    The uninstall command is:  sudo ansible-playbook -i inventory uninstall.yml \n    The username and the password to be provided are the credentials of root user (or sudoer) of the machine.    Remove the previously generated SSH keys  rm -f AutolabJS/deploy/keys/main_server/*  rm -f AutolabJS/deploy/keys/load_balancer/id_rsa*       Repeat the installation step-(7) given above to install AutolabJS again.      Installation creates containers for main server, load balancer, execution node, data base and Gitlab. For further information on managing these containers see  container maintenance  page.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/autolabcli/", 
+            "text": "", 
+            "title": "AutolabCLI"
+        }, 
+        {
+            "location": "/docs/", 
+            "text": "", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/website/", 
+            "text": "", 
+            "title": "AutolabWebsite"
         }
     ]
 }
