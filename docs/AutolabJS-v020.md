@@ -1,20 +1,17 @@
-# AutolabJS v0.2.0 Documentation
+### AutolabJS v0.2.0 Documentation ###
 
-### Deployment Tutorial
+### Deployment Tutorial ###
++ Install Autolab - [On single machine](v0.2.0-Deployment-on-Single-Machine), [On two machines](v0.2.0-Deployment-on-Two-Machines), [On Azure cloud](v0.2.0-On-Azure-Cloud)       
++ [Container Maintenance](v0.2.0-Container-Maintenance)   
++ [JSON details](v0.2.0-JSON-files-documetation)
++ [Uninstall AutolabJS](v0.2.0-Uninstall-AutolabJS)
++ FAQ - [Student](v0.2.0-Student-FAQs), [Instructor](v0.2.0-Instructor-FAQs), [Administrator](hv0.2.0-Administrator-FAQs)    
 
-* Install Autolab - [On single machine](/AutolabJS-v020-Deployment-on-Single-Machine/), On two machines, On Azure cloud
-* Container Maintenance
-* JSON details
-* Uninstall AutolabJS
-* FAQ - Student, Instructor, Administrator
+### Tutorials for Lab Authors ###
++ [Using AutolabJS - Initial Configuration](v0.2.0-Using-Autolab-in-a-Course)
++ [Creating a Lab](v0.2.0-Creating-and-Modifying-a-lab)
++ [Manage Course](v0.2.0-Manage-Course)
 
-### Tutorials for Lab Authors
-
-* Using AutolabJS - Initial Configuration
-* Creating a Lab
-* Manage Course
-
-### Tutorials for Students
-
-* Making a Submission
-* Post lab self evaluation
+### Tutorials for Students ###
++ [Making a Submission](v0.2.0-Making-a-Submission)
++ [Post lab self evaluation](v0.2.0-Post-lab-self-evaluation)
