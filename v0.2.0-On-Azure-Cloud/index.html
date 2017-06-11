@@ -15,7 +15,7 @@
     
     
       
-        <title>Home - AutolabJS</title>
+        <title>On Azure cloud - AutolabJS</title>
       
     
     
@@ -72,11 +72,15 @@
             
               
                 <span class="md-header-nav__parent">
-                  AutolabJS
+                  AutolabJS v0.2.0
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  Deployment Tutorial
                 </span>
               
             
-            Home
+            On Azure cloud
           
         </span>
       </div>
@@ -172,47 +176,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Home
-      </label>
-    
-    <a href="./" title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../AutolabJS/" title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contributors" title="Contributors" class="md-nav__link">
-    Contributors
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -436,10 +404,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
     
     <label class="md-nav__link" for="nav-2-3">
       AutolabJS v0.2.0
@@ -467,10 +437,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2" checked>
     
     <label class="md-nav__link" for="nav-2-3-2">
       Deployment Tutorial
@@ -510,11 +482,50 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../v0.2.0-On-Azure-Cloud/" title="On Azure cloud" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        On Azure cloud
+      </label>
+    
+    <a href="./" title="On Azure cloud" class="md-nav__link md-nav__link--active">
       On Azure cloud
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-on-single-machine" title="Deploying on Single Machine" class="md-nav__link">
+    Deploying on Single Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-on-two-machines" title="Deploying on Two Machines" class="md-nav__link">
+    Deploying on Two Machines
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -799,15 +810,20 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contributors" title="Contributors" class="md-nav__link">
-    Contributors
+  <a href="#deploying-on-single-machine" title="Deploying on Single Machine" class="md-nav__link">
+    Deploying on Single Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-on-two-machines" title="Deploying on Two Machines" class="md-nav__link">
+    Deploying on Two Machines
   </a>
   
 </li>
@@ -827,14 +843,149 @@
               
                 
                 
-                <h1 id="home">Home</h1>
-<p>Welcome to the AutolabJS wiki!</p>
-<p>Use the navigation sidebar to get to the page of interest.</p>
-<p>Want to contribute?, you are highly welcome. But, please follow the <a href="#">coding standards</a> before you submit a pull request.</p>
-<h2 id="contributors">Contributors</h2>
-<p>This project benefited from contributions of the following developers. The names are given in alphabetical order.</p>
-<p>Ankshit Jain, Gaurav Narula, Kashyap Gajera, Prasad Talasila, Rajat Agarwal, Tejas Sangol, Utkarsh Maheshwari, Vinamra Bhatia, Yash Singh</p>
-<p>For more details, please see the <a href="https://github.com/prasadtalasila/JavaAutolab/graphs/contributors">contributors graph</a></p>
+                  <h1>On Azure cloud</h1>
+                
+                <h2 id="deploying-on-single-machine">Deploying on Single Machine</h2>
+<ol>
+<li>Create single VM in an Azure resource manager group.</li>
+<li>
+<p>In the resource group, change the firewall (network security group) settings as follows.</p>
+<p><strong>Inbound Allowed</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="center">Source</th>
+<th align="center">Protocol</th>
+<th align="center">Port</th>
+<th align="center">Destination</th>
+<th align="center">Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default-allow-ssh</td>
+<td align="center">Any</td>
+<td align="center">TCP</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">22</td>
+</tr>
+<tr>
+<td>ssh</td>
+<td align="center">Any</td>
+<td align="center">TCP</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">2222</td>
+</tr>
+<tr>
+<td>webapp</td>
+<td align="center">Any</td>
+<td align="center">Any</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">9000</td>
+</tr>
+<tr>
+<td>gitlab</td>
+<td align="center">Any</td>
+<td align="center">Any</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">80</td>
+</tr>
+<tr>
+<td>gitlab_https</td>
+<td align="center">Any</td>
+<td align="center">Any</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">443</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outbound Allowed</strong></p>
+<p>None</p>
+</li>
+<li>
+<p>From this point onward, follow the instructions given on <a href="https://github.com/AutolabJS/AutolabJS/wiki/v0.2.0-Deployment-on-Single-Machine">Deployment on Single Machine</a> page.</p>
+</li>
+</ol>
+<h2 id="deploying-on-two-machines">Deploying on Two Machines</h2>
+<ol>
+<li>Create two VMs in one Azure resource manager group. You can name these containers as <strong>Front-End-and-LB</strong> and <strong>Execution-Nodes</strong></li>
+<li>
+<p>In <strong>Front-End-and-LB</strong> VM, change the firewall (network security group) settings as follows.</p>
+<p><strong>Inbound Allowed</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="center">Source</th>
+<th align="center">Protocol</th>
+<th align="center">Port</th>
+<th align="center">Destination</th>
+<th align="center">Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default-allow-ssh</td>
+<td align="center">Any</td>
+<td align="center">TCP</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">22</td>
+</tr>
+<tr>
+<td>ssh</td>
+<td align="center">Any</td>
+<td align="center">TCP</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">2222</td>
+</tr>
+<tr>
+<td>webapp</td>
+<td align="center">Any</td>
+<td align="center">Any</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">9000</td>
+</tr>
+<tr>
+<td>gitlab</td>
+<td align="center">Any</td>
+<td align="center">Any</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">80</td>
+</tr>
+<tr>
+<td>gitlab_https</td>
+<td align="center">Any</td>
+<td align="center">Any</td>
+<td align="center">*</td>
+<td align="center">Any</td>
+<td align="center">443</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outbound Allowed</strong></p>
+<p>None</p>
+</li>
+<li>
+<p>In <strong>Execution-Nodes</strong> VM, there is no need to change any firewall settings.</p>
+<p><strong>Inbound Allowed</strong>  <br />
+None</p>
+<p><strong>Outbound Allowed</strong>  <br />
+None</p>
+</li>
+<li>
+<p>From this point onward, follow the instructions given on <a href="https://github.com/AutolabJS/AutolabJS/wiki/v0.2.0-Deployment-on-Two-Machines">Deployment on Two Machines</a> page.</p>
+</li>
+</ol>
                 
                   
                 
@@ -853,7 +1004,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../v0.2.0-Deployment-on-Two-Machines/" title="On two machines" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -862,19 +1013,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                On two machines
               </span>
             </div>
           </a>
         
         
-          <a href="../AutolabJS-v010/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../v0.2.0-Container-Maintenance/" title="Container Maintenance" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Home
+                Container Maintenance
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

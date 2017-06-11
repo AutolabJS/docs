@@ -15,7 +15,7 @@
     
     
       
-        <title>Home - AutolabJS</title>
+        <title>On two machines - AutolabJS</title>
       
     
     
@@ -72,11 +72,15 @@
             
               
                 <span class="md-header-nav__parent">
-                  AutolabJS
+                  AutolabJS v0.2.0
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  Deployment Tutorial
                 </span>
               
             
-            Home
+            On two machines
           
         </span>
       </div>
@@ -172,47 +176,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Home
-      </label>
-    
-    <a href="./" title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../AutolabJS/" title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contributors" title="Contributors" class="md-nav__link">
-    Contributors
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -436,10 +404,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
     
     <label class="md-nav__link" for="nav-2-3">
       AutolabJS v0.2.0
@@ -467,10 +437,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2" checked>
     
     <label class="md-nav__link" for="nav-2-3-2">
       Deployment Tutorial
@@ -498,11 +470,50 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../v0.2.0-Deployment-on-Two-Machines/" title="On two machines" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        On two machines
+      </label>
+    
+    <a href="./" title="On two machines" class="md-nav__link md-nav__link--active">
       On two machines
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
+    Prerequisite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-machine-1" title="On Machine 1" class="md-nav__link">
+    On Machine 1
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -799,15 +810,20 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contributors" title="Contributors" class="md-nav__link">
-    Contributors
+  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
+    Prerequisite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-machine-1" title="On Machine 1" class="md-nav__link">
+    On Machine 1
   </a>
   
 </li>
@@ -827,14 +843,177 @@
               
                 
                 
-                <h1 id="home">Home</h1>
-<p>Welcome to the AutolabJS wiki!</p>
-<p>Use the navigation sidebar to get to the page of interest.</p>
-<p>Want to contribute?, you are highly welcome. But, please follow the <a href="#">coding standards</a> before you submit a pull request.</p>
-<h2 id="contributors">Contributors</h2>
-<p>This project benefited from contributions of the following developers. The names are given in alphabetical order.</p>
-<p>Ankshit Jain, Gaurav Narula, Kashyap Gajera, Prasad Talasila, Rajat Agarwal, Tejas Sangol, Utkarsh Maheshwari, Vinamra Bhatia, Yash Singh</p>
-<p>For more details, please see the <a href="https://github.com/prasadtalasila/JavaAutolab/graphs/contributors">contributors graph</a></p>
+                  <h1>On two machines</h1>
+                
+                <h2 id="prerequisite">Prerequisite</h2>
+<ol>
+<li>Ubuntu server 16.04 operating system.</li>
+<li>
+<p>Record the Domain names, Public and Private IP Addresses and Login Credentials of both the machines. Let label the IP addresses as follows.</p>
+<table>
+<thead>
+<tr>
+<th>Machine</th>
+<th align="center">Public IP</th>
+<th align="center">Private IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front-End-and-LB</td>
+<td align="center">Public_IP_1</td>
+<td align="center">Private_IP_1</td>
+</tr>
+<tr>
+<td>Execution-Nodes</td>
+<td align="center">Public_IP_2</td>
+<td align="center">Private_IP_2</td>
+</tr>
+</tbody>
+</table>
+<p>Because of ease of use, domain names (DNS) are a preferred option for hostnames in all the configuration files. If you have domain names for the machines, you can use the domain names in the place of IP addresses in all the configuration files.  <br />
+Most likely, your machine may be on a corporate private network with a gateway / proxy server / firewall connection to Internet. In that case, please use your machine's private ip address.  <br />
+You can locate the configured IP address of your machine using the following command.  <br />
+<code>ip addr show</code>
+in the displayed output, look for IP address following the <strong>inet</strong> keyword.</p>
+</li>
+<li>
+<p>Change the listening port of SSH server to 2222 in /etc/ssh/sshd_config file and restart the SSH server using
+the following command.  <br />
+<code>sudo service ssh restart</code>   <br />
+    If the SSH server is not running on your machine, please ignore the rest of this section and directly go to <strong><a href="https://github.com/AutolabJS/AutolabJS/wiki/v0.2-beta-Deployment-on-Two-Machines#on-machine-1">On Machine 1</a></strong> section.</p>
+</li>
+<li>For the SSH setting to be fully effective, logout of the current SSH session and relogin.</li>
+<li>From Machine 1, SSH into Machine 2 using its Private IP once to add the SSH server public key of Machine 2  to <code>~/.ssh/known_hosts</code> in Machine 1.</li>
+</ol>
+<h2 id="on-machine-1">On Machine 1</h2>
+<ol>
+<li>Create SSH config file (~/.ssh/config) with the following contents.  <br />
+<code>Host *</code>  <br />
+        &nbsp;&nbsp;&nbsp;&nbsp; <code>StrictHostKeyChecking no</code>  <br />
+        &nbsp;&nbsp;&nbsp;&nbsp; <code>UserKnownHostsFile=/dev/null</code></li>
+<li>Create ansible config file (~/.ansible.cfg) with the following contents  <br />
+<code>[defaults]</code>  <br />
+<code>host_key_checking = False</code>    </li>
+<li>Clone Repository  <br />
+<code>git clone https://github.com/AutolabJS/AutolabJS</code></li>
+<li>Change to deploy directory  <br />
+<code>cd AutolabJS/deploy</code></li>
+<li>Execute setup script  <br />
+<code>./setup.sh</code></li>
+<li>Configure the AutolabJS components by editing the configuration files in <code>deploy/configs/&lt;component&gt;</code>. Note that you need to use the Private IP of the machines wherever required.  <br />
+The list of configuration files to be changed are:  <br />
+<strong>deploy/configs/main_server:</strong> APIKeys.json, conf.json, courses.json, labs.json  <br />
+<strong>deploy/configs/load_balancer:</strong> nodes_data_conf.json  <br />
+<strong>deploy/configs/execution_nodes:</strong> scores.json, conf.json    </li>
+<li>
+<p>Edit the ansible inventory file. You can find the <em>inventory</em> in <code>AutolabJS/deploy</code> directory.</p>
+<ol>
+<li>
+<p>Update the credentials as required. Please make sure that the changed passwords match in both the inventory file and the configuration files. <br />
+ The locations of credentials are:    </p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th align="center">MySQL</th>
+<th align="center">GitLab</th>
+<th align="center">Main Server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deploy/inventory</td>
+<td align="center">&#10004;</td>
+<td align="center">&#10004;</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>deploy/configs/main_server/APIKeys.json</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">&#10004; (for /admin route)</td>
+</tr>
+<tr>
+<td>deploy/configs/main_server/conf.json</td>
+<td align="center">&#10004;</td>
+<td align="center">&#10004;</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>deploy/configs/load_balancer/nodes_data_conf.json</td>
+<td align="center">&#10004;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>In the <code>gitlab</code> section of inventory file, change the hostname of <strong>gitlab</strong> item from <strong>localhost</strong> to <strong>Public IP</strong>. The line should look like  <br />
+```
+[gitlab]    </p>
+</li>
+</ol>
+<p><Public_IP_1> ansible_connection=local ansible_python_interpreter=/usr/bin/python2 gitlab_password=<gitlab_password>
+```
+The only exception to the use of private IP is given in the above line. If your Gitlab installation runs on a computer with one public IP address and one private IP address, use the public_IP_1 address in the above line. Otherwise, use private_IP_1 address.    </p>
+</li>
+<li>
+<p>In the <code>loadbalancer</code> section of inventory file, change <strong>gitlab_hostname</strong> variable in loadbalancer group to <strong>Private IP</strong> of Machine 1.  <br />
+    ```
+    [loadbalancer]    </p>
+<p>localhost ansible_connection=local ansible_python_interpreter=/usr/bin/python2 submissions_dir=../load_balancer/submissions gitlab_hostname=<Private_IP_1> gitlab_password=12345678
+<code>4. In the `executionnodes` section of inventory file, change the hostname of **executionnode** item to **Private IP** of Execution Node and change gitlab_hostname variable to **Private IP** of Machine 1. The connection to execution nodes is changed from localhost to ssh. The line should look like</code>
+[executionnodes]    </p>
+<p><Private_IP_2> ansible_connection=ssh ansible_user=<machine2_user> ansible_password=<machine2_ssh_password> ansible_python_interpreter=/usr/bin/python2 gitlab_hostname=<Private_IP_1> gitlab_password=12345678 port=8082
+<code>``
+1. Run the ansible-playbook</code>sudo ansible-playbook -i inventory playbook.yml -u <username2> --ask-sudo-pass`  <br />
+   The username and the password to be provided are the credentials of root user of <strong>machine2</strong>.</p>
+</li>
+<li>
+<p>Ansible installs all the components of AutolabJS. If the previous step executes successfully, the <strong>installation is complete</strong>.</p>
+</li>
+<li>
+<p>Add cron job to restart the AutolabJS components automatically. You need to do this on both the machines.</p>
+<ol>
+<li>Login as root  <br />
+<code>sudo su</code></li>
+<li>Copy restart script to root account on both the machines <br />
+<code>cp deploy/autolab-restart.sh /root/</code>  <br />
+   You need to use <code>sftp</code> to copy autolab-restart.sh script to machine2.</li>
+<li>Open crontab editor as root user  <br />
+<code>crontab -e</code></li>
+<li>Enter a job in the file to run the restart script every minute.  <br />
+<code>* * * * *    bash /root/autolab-restart.sh</code></li>
+</ol>
+</li>
+<li>
+<p>In case of installation failure due to incorrect configuration, please see the <a href="https://github.com/AutolabJS/AutolabJS/wiki/v0.2.0-FAQs">FAQ</a> page to see if you can resolve the error. If not, you can run the following commands to uninstall AutolabJS.   </p>
+<ol>
+<li>
+<p>The uninstall command is:  <br />
+<code>sudo ansible-playbook -i inventory uninstall.yml -u &lt;username2&gt; --ask-sudo-pass</code>  <br />
+   The username and the password to be provided are the credentials of root user of <strong>machine2</strong>.</p>
+</li>
+<li>
+<p>Remove the previously generated SSH keys  <br />
+<code>rm -f AutolabJS/deploy/keys/main_server/*</code>  <br />
+<code>rm -f AutolabJS/deploy/keys/load_balancer/id_rsa*</code>    </p>
+</li>
+<li>
+<p>Check the configuration done in steps - (6), (7) and Repeat the installation step-(8) given above.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>After successful installation, delete SSH and ansible configuration files.  <br />
+<code>rm ~/.ssh/config ~/.ansible.cfg</code></p>
+</li>
+<li>
+<p>Installation creates containers for main server, load balancer, execution node, data base and Gitlab. For further information on managing these containers see <a href="https://github.com/AutolabJS/AutolabJS/wiki/v0.2.0-Container-Maintenance">container maintenance</a> page.</p>
+</li>
+</ol>
                 
                   
                 
@@ -853,7 +1032,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../v0.2.0-Deployment-on-Single-Machine/" title="Deployment-on-Single-Machine" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -862,19 +1041,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Deployment-on-Single-Machine
               </span>
             </div>
           </a>
         
         
-          <a href="../AutolabJS-v010/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../v0.2.0-On-Azure-Cloud/" title="On Azure cloud" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Home
+                On Azure cloud
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

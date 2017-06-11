@@ -15,7 +15,7 @@
     
     
       
-        <title>Home - AutolabJS</title>
+        <title>Manage Course - AutolabJS</title>
       
     
     
@@ -72,11 +72,15 @@
             
               
                 <span class="md-header-nav__parent">
-                  AutolabJS
+                  AutolabJS v0.2.0
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  Tutorials for Lab Authors
                 </span>
               
             
-            Home
+            Manage Course
           
         </span>
       </div>
@@ -172,47 +176,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Home
-      </label>
-    
-    <a href="./" title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../AutolabJS/" title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contributors" title="Contributors" class="md-nav__link">
-    Contributors
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -436,10 +404,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
     
     <label class="md-nav__link" for="nav-2-3">
       AutolabJS v0.2.0
@@ -623,10 +593,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-3" type="checkbox" id="nav-2-3-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-3" type="checkbox" id="nav-2-3-3" checked>
     
     <label class="md-nav__link" for="nav-2-3-3">
       Tutorials for Lab Authors
@@ -666,11 +638,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../v0.2.0-Manage-Course/" title="Manage Course" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="Manage Course" class="md-nav__link md-nav__link--active">
       Manage Course
     </a>
+    
   </li>
 
         
@@ -799,22 +778,6 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contributors" title="Contributors" class="md-nav__link">
-    Contributors
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
   
 </nav>
                   </div>
@@ -827,14 +790,49 @@
               
                 
                 
-                <h1 id="home">Home</h1>
-<p>Welcome to the AutolabJS wiki!</p>
-<p>Use the navigation sidebar to get to the page of interest.</p>
-<p>Want to contribute?, you are highly welcome. But, please follow the <a href="#">coding standards</a> before you submit a pull request.</p>
-<h2 id="contributors">Contributors</h2>
-<p>This project benefited from contributions of the following developers. The names are given in alphabetical order.</p>
-<p>Ankshit Jain, Gaurav Narula, Kashyap Gajera, Prasad Talasila, Rajat Agarwal, Tejas Sangol, Utkarsh Maheshwari, Vinamra Bhatia, Yash Singh</p>
-<p>For more details, please see the <a href="https://github.com/prasadtalasila/JavaAutolab/graphs/contributors">contributors graph</a></p>
+                  <h1>Manage Course</h1>
+                
+                <p>You can manage the creation, update and deletion of labs from the website of your installation. You can also edit the course details from the webpage of the installation.The instructions for managing the labs are given below.</p>
+<ol>
+<li>
+<p><strong>Login</strong>  <br />
+    Open the admin URL: <em>https://autolab.bits-goa.ac.in:9000/admin</em>. You will be shown a form with a Login Key. Please enter the login key specified in <em>AutolabJS/deploy/configs/main_server/APIKeys.json</em>.</p>
+</li>
+<li>
+<p><strong>Choose Configure</strong>  <br />
+    You will be shown a page with <em>Configure</em> and <em>Revaluate</em> buttons. Of the two, only <em>Configure</em> is working. Click on <em>Configure</em> button.</p>
+</li>
+<li>
+<p><strong>Edit Course Details</strong>  <br />
+    [[images/admin-course-details.png]]</p>
+</li>
+<li>
+<p><strong>Edit Existing Labs</strong>  <br />
+    You will be shown a series of tabs, each tab corresponding to a lab. If you would like to delete a lab, all you have to do is click on the cross-mark corresponding the the lab.  <br />
+    [[images/admin-labs.png]]</p>
+<p>If you want to edit the details of the lab, click anywhere on the tab except the cross-mark. You will be shown a filled form. You can edit the lab details as per your requirements.  <br />
+[[images/admin-lab-edit.png]]</p>
+</li>
+<li>
+<p><strong>Create New Lab</strong>  <br />
+    Click on <em>Add Labs</em> button. A new tab will be added to the page. You can click on the newly added tab to see an empty form. A layout of the form is shown below. You can fill the details of the form.  <br />
+    [[images/admin-lab-create.png]]  <br />
+    (NOTE: The time is to be specified in HH:MM format, ex: 13:30 for 1:30PM and 4:00 for 4AM)    </p>
+<p>Please also note that the name of the lab should be same as the gitlab repository, i.e., each lab created on the website should have a corresponding gitlab repository with same name for successful evaluation.    </p>
+</li>
+<li>
+<p><strong>Save</strong>  <br />
+     After the editing work is complete, click on <em>Save</em> button.
+     After completing the configuration, do remember to <strong>logout</strong>.</p>
+</li>
+<li>
+<p><strong>Restart Main Server</strong>  <br />
+    Login to the computer running the mainserver container and restart the mainserver container.  <br />
+<code>shell
+    $ sudo docker restart mainserver</code>
+    Now, the modifications shall be reflected on the website.</p>
+</li>
+</ol>
                 
                   
                 
@@ -853,7 +851,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../v0.2.0-Creating-and-Modifying-a-lab/" title="Creating a Lab" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -862,19 +860,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Creating a Lab
               </span>
             </div>
           </a>
         
         
-          <a href="../AutolabJS-v010/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../v0.2.0-Making-a-Submission/" title="Making a Submission" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Home
+                Making a Submission
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

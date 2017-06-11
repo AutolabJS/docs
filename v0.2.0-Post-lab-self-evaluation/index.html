@@ -15,7 +15,7 @@
     
     
       
-        <title>Home - AutolabJS</title>
+        <title>Post lab self evaluation - AutolabJS</title>
       
     
     
@@ -72,11 +72,15 @@
             
               
                 <span class="md-header-nav__parent">
-                  AutolabJS
+                  AutolabJS v0.2.0
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  Tutorials for Students
                 </span>
               
             
-            Home
+            Post lab self evaluation
           
         </span>
       </div>
@@ -172,47 +176,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Home
-      </label>
-    
-    <a href="./" title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../AutolabJS/" title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contributors" title="Contributors" class="md-nav__link">
-    Contributors
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -436,10 +404,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
     
     <label class="md-nav__link" for="nav-2-3">
       AutolabJS v0.2.0
@@ -683,10 +653,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-4" type="checkbox" id="nav-2-3-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-4" type="checkbox" id="nav-2-3-4" checked>
     
     <label class="md-nav__link" for="nav-2-3-4">
       Tutorials for Students
@@ -714,11 +686,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../v0.2.0-Post-lab-self-evaluation/" title="Post lab self evaluation" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="Post lab self evaluation" class="md-nav__link md-nav__link--active">
       Post lab self evaluation
     </a>
+    
   </li>
 
         
@@ -799,22 +778,6 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#contributors" title="Contributors" class="md-nav__link">
-    Contributors
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
   
 </nav>
                   </div>
@@ -827,14 +790,40 @@
               
                 
                 
-                <h1 id="home">Home</h1>
-<p>Welcome to the AutolabJS wiki!</p>
-<p>Use the navigation sidebar to get to the page of interest.</p>
-<p>Want to contribute?, you are highly welcome. But, please follow the <a href="#">coding standards</a> before you submit a pull request.</p>
-<h2 id="contributors">Contributors</h2>
-<p>This project benefited from contributions of the following developers. The names are given in alphabetical order.</p>
-<p>Ankshit Jain, Gaurav Narula, Kashyap Gajera, Prasad Talasila, Rajat Agarwal, Tejas Sangol, Utkarsh Maheshwari, Vinamra Bhatia, Yash Singh</p>
-<p>For more details, please see the <a href="https://github.com/prasadtalasila/JavaAutolab/graphs/contributors">contributors graph</a></p>
+                  <h1>Post lab self evaluation</h1>
+                
+                <p><strong>Prerequisites</strong></p>
+<ol>
+<li>Following all the steps given here requires availability of the compiler + interpreter of a chosen programming language.    </li>
+<li>You are using Ubuntu 16.04 Operating System.</li>
+</ol>
+<p><strong>Self Evaluation</strong>  <br />
+The steps for self-evaluation are as follows.</p>
+<ol>
+<li>
+<p><strong>Clone the code base</strong>.   <br />
+    For the same of illustration, let us assume that your username is 2012A7PS001G and you are interested in self-evaluation for "lab1".
+   <code>shell
+    $git clone https://autolab.bits-goa.ac.in/lab_author/lab1.git
+    $git clone https://autolab.bits-goa.ac.in/lab_author/lab1.git 2017A7PS001G</code></p>
+</li>
+<li>
+<p>Copy your code to <strong>student_solution</strong>.
+   <code>shell
+    $mkdir lab1/student_solution
+    $cp 2017A7PS001G/* lab1/student_solution/</code></p>
+</li>
+<li>
+<p><strong>Evaluate  yourself</strong>.  <br />
+<code>shell
+    $bash execute.sh language-key</code>
+   The languages and their keys are:  <br />
+   C - c, C++ 2011 - cpp, C++ 2014 - cpp14, Java - java, Python2 - python2, Python3 - python3    </p>
+</li>
+<li>
+<p>The output shall be saved in <strong>results/</strong> directory. The <strong>results/scores.txt</strong> will contain the scores for that submission and <strong>results/logs.txt</strong> will contain the errors encountered during the compilation. </p>
+</li>
+</ol>
                 
                   
                 
@@ -853,7 +842,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../v0.2.0-Making-a-Submission/" title="Making a Submission" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -862,19 +851,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Making a Submission
               </span>
             </div>
           </a>
         
         
-          <a href="../AutolabJS-v010/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../AutolabJS-coding-standards/" title="AutloabJS Coding Standards" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Home
+                AutloabJS Coding Standards
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
