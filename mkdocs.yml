@@ -4,10 +4,41 @@ pages:
   - Home: 'index.md'
   - AutolabJS:
     - Home:  'AutolabJS.md'
-    - AutolabJS v0.1.0: 'AutolabJS-v010.md'
+    - AutolabJS v0.1.0: 
+      - Home : 'AutolabJS-v010.md'
+      - Deployment Tutorial :
+        - Deployment-on-Single-Machine: 'v0.1-Deploying-using-Docker.md'
+        - On two machines : 'v0.1-Two-Machines.md'
+        - On Azure cloud : 'v0.1-On-Azure-Cloud.md'     
+        - JSON details : 'v0.1-JSON-files-documetation.md'
+        - Uninstall AutolabJS : 'v0.2.0-Uninstall-Autolab.md'
+      - Tutorials for Lab Authors :
+        - Creating a Lab : 'v0.1-Creating-and-Modifying-a-lab.md'
+        - Automate lab/user : 'v0.1-Automate-Lab-Create-Update-Delete-Activities.md'
+      - Tutorials for Students :
+        - Making a Submission : 'v0.1-Making-a-Submission.md'
+        - Post lab self evaluation : 'v0.1-Post-lab-self-evaluation.md'
     - AutolabJS v0.2.0:
       - Home: 'AutolabJS-v020.md'
-      - Deployment-on-Single-Machine: 'AutolabJS-v020-Deployment-on-Single-Machine.md'
+      - Deployment Tutorial :
+        - Deployment-on-Single-Machine: 'v0.2.0-Deployment-on-Single-Machine.md'
+        - On two machines : 'v0.2.0-Deployment-on-Two-Machines.md'
+        - On Azure cloud : 'v0.2.0-On-Azure-Cloud.md'     
+        - Container Maintenance : 'v0.2.0-Container-Maintenance.md'
+        - JSON details : 'v0.2.0-JSON-files-documetation.md'
+        - Uninstall AutolabJS : 'v0.2.0-Uninstall-Autolab.md'
+        - FAQ:
+          - Student: 'v0.2.0-Student-FAQs.md'
+          - Instructor : 'v0.2.0-Instructor-FAQs.md'
+          - Administrator: 'v0.2.0-Administrator-FAQs.md'   
+      - Tutorials for Lab Authors :
+        - Using AutolabJS-Initial Configuration : 'v0.2.0-Using-Autolab-in-a-Course.md'
+        - Creating a Lab : 'v0.2.0-Creating-and-Modifying-a-lab.md'
+        - Manage Course : 'v0.2.0-Manage-Course.md'
+      - Tutorials for Students :
+        - Making a Submission : 'v0.2.0-Making-a-Submission.md'
+        - Post lab self evaluation : 'v0.2.0-Post-lab-self-evaluation.md'
+  - AutloabJS Coding Standards : 'AutolabJS-coding-standards.md'
   - AutolabCLI: 'autolabcli.md'
   - Documentation: 'docs.md'
   - AutolabWebsite: 'website.md'
@@ -15,8 +46,7 @@ extra:
   palette:
     primary: 'blue'
     accent: 'light blue'
-
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/AutolabJS'
+link: 'https://github.com/AutolabJS'
