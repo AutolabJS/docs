@@ -1,0 +1,1029 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.7.1">
+    
+    
+      
+        <title>Deployment-on-Single-Machine - AutolabJS</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-f98ca285f9.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="AutolabJS" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  AutolabJS v0.2.0
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  Deployment Tutorial
+                </span>
+              
+            
+            Deployment-on-Single-Machine
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    AutolabJS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      AutolabJS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        AutolabJS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AutolabJS/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      AutolabJS v0.1.0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        AutolabJS v0.1.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AutolabJS-v010/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-2" type="checkbox" id="nav-2-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2-2">
+      Deployment Tutorial
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-2">
+        Deployment Tutorial
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.1-Deploying-using-Docker/" title="Deployment-on-Single-Machine" class="md-nav__link">
+      Deployment-on-Single-Machine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.1-Two-Machines/" title="On two machines" class="md-nav__link">
+      On two machines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.1-On-Azure-Cloud/" title="On Azure cloud" class="md-nav__link">
+      On Azure cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.1-JSON-files-documetation/" title="JSON details" class="md-nav__link">
+      JSON details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Uninstall-Autolab/" title="Uninstall AutolabJS" class="md-nav__link">
+      Uninstall AutolabJS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
+    
+    <label class="md-nav__link" for="nav-2-2-3">
+      Tutorials for Lab Authors
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-3">
+        Tutorials for Lab Authors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.1-Creating-and-Modifying-a-lab/" title="Creating a Lab" class="md-nav__link">
+      Creating a Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.1-Automate-Lab-Create-Update-Delete-Activities/" title="Automate lab/user" class="md-nav__link">
+      Automate lab/user
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-4" type="checkbox" id="nav-2-2-4">
+    
+    <label class="md-nav__link" for="nav-2-2-4">
+      Tutorials for Students
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-2-4">
+        Tutorials for Students
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.1-Making-a-Submission/" title="Making a Submission" class="md-nav__link">
+      Making a Submission
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.1-Post-lab-self-evaluation/" title="Post lab self evaluation" class="md-nav__link">
+      Post lab self evaluation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-2-3">
+      AutolabJS v0.2.0
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        AutolabJS v0.2.0
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AutolabJS-v020/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-3-2">
+      Deployment Tutorial
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-2">
+        Deployment Tutorial
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Deployment-on-Single-Machine
+      </label>
+    
+    <a href="./" title="Deployment-on-Single-Machine" class="md-nav__link md-nav__link--active">
+      Deployment-on-Single-Machine
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
+    Prerequisite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Deployment-on-Two-Machines/" title="On two machines" class="md-nav__link">
+      On two machines
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-On-Azure-Cloud/" title="On Azure cloud" class="md-nav__link">
+      On Azure cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Container-Maintenance/" title="Container Maintenance" class="md-nav__link">
+      Container Maintenance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-JSON-files-documetation/" title="JSON details" class="md-nav__link">
+      JSON details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Uninstall-Autolab/" title="Uninstall AutolabJS" class="md-nav__link">
+      Uninstall AutolabJS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2-7" type="checkbox" id="nav-2-3-2-7">
+    
+    <label class="md-nav__link" for="nav-2-3-2-7">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-3-2-7">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Student-FAQs/" title="Student" class="md-nav__link">
+      Student
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Instructor-FAQs/" title="Instructor" class="md-nav__link">
+      Instructor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Administrator-FAQs/" title="Administrator" class="md-nav__link">
+      Administrator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-3" type="checkbox" id="nav-2-3-3">
+    
+    <label class="md-nav__link" for="nav-2-3-3">
+      Tutorials for Lab Authors
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-3">
+        Tutorials for Lab Authors
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Using-Autolab-in-a-Course/" title="Using AutolabJS-Initial Configuration" class="md-nav__link">
+      Using AutolabJS-Initial Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Creating-and-Modifying-a-lab/" title="Creating a Lab" class="md-nav__link">
+      Creating a Lab
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Manage-Course/" title="Manage Course" class="md-nav__link">
+      Manage Course
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-4" type="checkbox" id="nav-2-3-4">
+    
+    <label class="md-nav__link" for="nav-2-3-4">
+      Tutorials for Students
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-4">
+        Tutorials for Students
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Making-a-Submission/" title="Making a Submission" class="md-nav__link">
+      Making a Submission
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../v0.2.0-Post-lab-self-evaluation/" title="Post lab self evaluation" class="md-nav__link">
+      Post lab self evaluation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../AutolabJS-coding-standards/" title="AutloabJS Coding Standards" class="md-nav__link">
+      AutloabJS Coding Standards
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../autolabcli/" title="AutolabCLI" class="md-nav__link">
+      AutolabCLI
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../docs/" title="Documentation" class="md-nav__link">
+      Documentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../website/" title="AutolabWebsite" class="md-nav__link">
+      AutolabWebsite
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisite" title="Prerequisite" class="md-nav__link">
+    Prerequisite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Deployment-on-Single-Machine</h1>
+                
+                <h2 id="prerequisite">Prerequisite</h2>
+<ol>
+<li>Ubuntu server 16.04 operating system.</li>
+<li>Record the IP Address / domain name of the machine. If your machine has multiple IP addresses, please use the public IP address for installation purposes. Because of ease of use, domain name (DNS) is a preferred option for hostname in all the configuration files.  <br />
+Most likely, your machine may be on a corporate private network with a gateway / proxy server / firewall connection to Internet. In that case, please use your machine's private ip address.  <br />
+You can locate the configured IP address of your machine using the following command.  <br />
+<code>ip addr show</code>
+    in the displayed output, look for IP address following the <strong>inet</strong> keyword.</li>
+<li>Change the listening port of SSH server to 2222 in <code>/etc/ssh/sshd_config</code> file and restart the SSH server using
+the following command.  <br />
+<code>sudo service ssh restart</code>   <br />
+    If the SSH server is not running on your machine, please ignore the rest of this section and directly go to <strong><a href="https://github.com/AutolabJS/AutolabJS/wiki/v0.2.0-Deployment-on-Single-Machine#installation">Installation</a></strong> section.</li>
+<li>For the SSH setting to be fully effective, logout of the current SSH session and relogin.</li>
+</ol>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Clone Repository  <br />
+<code>git clone https://github.com/AutolabJS/AutolabJS.git</code></li>
+<li>Change to deploy directory  <br />
+<code>cd AutolabJS/deploy</code></li>
+<li>Execute setup script  <br />
+<code>./setup.sh</code></li>
+<li>Configure the AutolabJS components by editing the configuration files in <code>deploy/configs/&lt;component&gt;</code>. Note that you need to use <code>localhost</code> for IP address of the machines wherever required. Unless you have special requirements, you can use the default host(name) and port numbers.  <br />
+The list of configuration files to be changed are:  <br />
+<strong>deploy/configs/main_server:</strong> APIKeys.json, conf.json, courses.json, labs.json  <br />
+<strong>deploy/configs/load_balancer:</strong> nodes_data_conf.json  <br />
+<strong>deploy/configs/execution_nodes:</strong> scores.json, conf.json    </li>
+<li>
+<p>Do remember to change the default passwords in both the inventory file (<code>AutolabJS/deploy/inventory</code>) and in the configuration files. Please make sure that the changed passwords match in both the inventory file and the configuration files.  <br />
+The locations of credentials are:    </p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th align="center">MySQL</th>
+<th align="center">GitLab</th>
+<th align="center">Main Server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deploy/inventory</td>
+<td align="center">&#10004;</td>
+<td align="center">&#10004;</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>deploy/configs/main_server/APIKeys.json</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">&#10004; (for /admin route)</td>
+</tr>
+<tr>
+<td>deploy/configs/main_server/conf.json</td>
+<td align="center">&#10004;</td>
+<td align="center">&#10004;</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>deploy/configs/load_balancer/nodes_data_conf.json</td>
+<td align="center">&#10004;</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>In the <code>gitlab</code> section of inventory file, change the hostname of <strong>gitlab</strong> item from <strong>localhost</strong> to <strong>Machine IP / domain name</strong>. If the machine has multiple IP addresses, then please use the public IP address. The line should look like  <br />
+    ```
+    [gitlab]    </p>
+<p><Machine_IP> ansible_connection=local ansible_python_interpreter=/usr/bin/python2 gitlab_password=<gitlab_password>
+<code>``
+1. Run the ansible-playbook:</code>sudo ansible-playbook -i inventory playbook-single.yml<code>The username and the password to be provided are the credentials of root user  (or sudoer) of the machine.
+1. Ansible installs all the components of AutolabJS. If the previous step executes successfully, the **installation is complete**.
+1. Add cron job to restart the AutolabJS components automatically.
+1. Login as root</code>sudo su<code>1. Copy restart script to root account</code>cp deploy/autolab-restart.sh /root/<code>1. Open crontab editor as root user</code>crontab -e<code>1. Enter a job in the file to run the restart script every minute.</code>   * <em> * </em> *    bash /root/autolab-restart.sh<code>1. In case of installation failure due to incorrect configuration, please see the [FAQ](https://github.com/AutolabJS/AutolabJS/wiki/v0.2.0-FAQs) page to see if you can resolve the error. If not, you can run the following commands to uninstall AutolabJS.    
+1. The uninstall command is:</code>sudo ansible-playbook -i inventory uninstall.yml`  <br />
+   The username and the password to be provided are the credentials of root user  (or sudoer) of the machine.</p>
+<ol>
+<li>
+<p>Remove the previously generated SSH keys  <br />
+<code>rm -f AutolabJS/deploy/keys/main_server/*</code>  <br />
+<code>rm -f AutolabJS/deploy/keys/load_balancer/id_rsa*</code>    </p>
+</li>
+<li>
+<p>Repeat the installation step-(7) given above to install AutolabJS again.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Installation creates containers for main server, load balancer, execution node, data base and Gitlab. For further information on managing these containers see <a href="https://github.com/AutolabJS/AutolabJS/wiki/v0.2.0-Container-Maintenance">container maintenance</a> page.</p>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../AutolabJS-v020/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../v0.2.0-Deployment-on-Two-Machines/" title="On two machines" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                On two machines
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-e3caa82af6.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
