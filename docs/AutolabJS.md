@@ -1,10 +1,10 @@
 # Home
 
-Welcome to the AutolabJS wiki!
+Welcome to the AutolabJS docs!
 
 Use the navigation sidebar to get to the page of interest.
 
-Want to contribute?, you are highly welcome. But, please follow the [coding standards](#) before you submit a pull request.
+Want to contribute?, you are highly welcome. But, please follow the [coding standards](AutolabJS-coding-standards.md) before you submit a pull request.
 
 ## Contributors
 
