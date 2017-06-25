@@ -15,7 +15,7 @@
     
     
       
-        <title>Coding Standards - AutolabJS</title>
+        <title>Student Tutorial - AutolabJS</title>
       
     
     
@@ -71,8 +71,12 @@
           
             
               
+                <span class="md-header-nav__parent">
+                  AutolabCLI
+                </span>
+              
             
-            Coding Standards
+            Student Tutorial
           
         </span>
       </div>
@@ -867,43 +871,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Coding Standards
-      </label>
-    
-    <a href="./" title="Coding Standards" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../AutolabJS-coding-standards/" title="Coding Standards" class="md-nav__link">
       Coding Standards
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -911,10 +883,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       AutolabCLI
@@ -942,11 +916,68 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Autolabclireadme/" title="Student Tutorial" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Student Tutorial
+      </label>
+    
+    <a href="./" title="Student Tutorial" class="md-nav__link md-nav__link--active">
       Student Tutorial
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commands" title="Commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshot" title="Screenshot" class="md-nav__link">
+    Screenshot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" title="License" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -993,13 +1024,36 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
+  <a href="#commands" title="Commands" class="md-nav__link">
+    Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshot" title="Screenshot" class="md-nav__link">
+    Screenshot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" title="License" class="md-nav__link">
+    License
   </a>
   
 </li>
@@ -1019,42 +1073,29 @@
               
                 
                 
-                  <h1>Coding Standards</h1>
-                
-                <p>Adherence to the following coding standards would be good.</p>
-<ol>
-<li>What counts finally are the <strong>Tested Features in Use</strong>. </li>
-<li>Three values of any software are: features, simple design and feedback. Testing is the only way to simplify the design. So consider improvement in all the three values.    </li>
-<li>A stable release is mandatory for stable and predictable end-user installation.    </li>
-<li>Design and code should clearly articulate the interactions / stories / metaphors of the problem domain. PRACTICE DESIGN and IMPLEMENTATION in DOMAIN.    </li>
-<li>Adherence to java script coding standards as prescribed by eminent authorities.<ol>
-<li>Java Script : The Good Parts, <a href="http://javascript.crockford.com/">Douglas Crockford</a> / <a href="http://eloquentjavascript.net/">Eloquent Javascript</a>, Marijn Haverbeke.  <br />
-Before each commit, a committer runs <a href="http://eslint.org/">ESLint</a>, <a href="http://jshint.com/docs/cli/">JSHint</a> and <a href="http://jslinterrors.com/">JSLint Errors</a> on the code-base and fixes all the error and warning messages. </li>
-<li>Shell scripts : Shell script coding standard by <a href="http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/">Kfir Lavi</a> and <a href="http://robertmuth.blogspot.in/2012/08/better-bash-scripting-in-15-minutes.html">Robert Muth</a>. Before each commit, a committer runs <a href="https://www.shellcheck.net/">shellcheck</a> on the code-base and fixes all the error and warning messages.    </li>
-</ol>
-</li>
-<li>All the new code commits shall have at least the unit tests. For JS, use <a href="https://mochajs.org/">mochai</a> and <a href="http://chaijs.com/">chai</a>. For shell script, use <a href="https://github.com/sstephenson/bats">Bats</a>.    </li>
-<li>Creation and adherence to coding standard checklist. At the moment, we are following the <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-170-software-studio-spring-2013/projects/MIT6_170S13_proj-chklst.pdf">project checklist</a> from MIT course, <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-170-software-studio-spring-2013/index.htm">6.170 Software Studio</a></li>
-<li>An issue reported should have a detailed bug report that can help replicate the problem.</li>
-<li>Always maintain clean separation of coding, testing, integration, deployment and production stages. <ol>
-<li><strong>NEVER EVER CODE ON THE PRODUCTION SYSTEM</strong>.</li>
-</ol>
-</li>
-</ol>
-<h4 id="references">References</h4>
-<ol>
-<li><a href="http://ronjeffries.com/xprog/articles/jatrtsmetric/">RTF : A Metric Leading to Agility</a>, Ron Jeffries.</li>
-<li><a href="https://www.scrumalliance.org/community/articles/2016/august/measuring-agile-projects-using-running-tested-feat">Measuring Agile Projects Using Running Tested Features Metrics</a>, Priyanjana Deb and Abhik Datta</li>
-<li><a href="http://www.joelonsoftware.com/articles/fog0000000043.html">The Joel Test: 12 steps to Better Code</a>, Joel Spolsky    </li>
-<li><a href="https://www.cs.princeton.edu/~bwk/testing.html">Brian W Kernighan on Testing</a>    </li>
-<li><a href="http://web.mit.edu/6.033/www/papers/Worse_is_Better.pdf">Worse is Better</a> <a href="http://www.dreamsongs.com/WorseIsBetter.html">History</a>    </li>
-<li><a href="https://12factor.net/">Twelve-factor apps</a>    </li>
-<li><a href="http://agilemanifesto.org/principles.html">Agile Manifesto</a>    </li>
-<li><a href="https://kkovacs.eu/software-project-best-practices-checklist">Software project best practices checklist</a>, Kristóf KOVÁCS</li>
-<li>Development process - <a href="http://www.ibm.com/developerworks/websphere/library/techarticles/0306_perks/perks2.html">Mike Perks @ IBM</a>     </li>
-<li>JB Rainsberger - <a href="https://www.youtube.com/watch?v=oT-5eIsRixA">An introduction to Agile Software Development</a>, <a href="https://www.youtube.com/watch?v=7HecgbghFTk">Economics of Software Design</a>    </li>
-<li><a href="http://continuousdev.com/2015/07/continuous-integration-best-practices-checklist/">CI best practices check list - Piotr Oktaba</a>    </li>
-</ol>
+                <h1 id="autolab-cli">AutoLab CLI</h1>
+<p><a href="https://codeclimate.com/github/prasadtalasila/autolabcli"><img alt="Code Climate" src="https://codeclimate.com/github/prasadtalasila/autolabcli/badges/gpa.svg" /></a> <a href="https://snyk.io/test/github/autolabjs/autolabcli"><img alt="Known Vulnerabilities" src="https://snyk.io/test/github/autolabjs/autolabcli/badge.svg" /></a> <a href="https://travis-ci.org/AutolabJS/autolabcli"><img alt="Build Status" src="https://travis-ci.org/AutolabJS/autolabcli.svg?branch=master" /></a>    </p>
+<p>A client command line interface for submissions to <a href="https://github.com/AutolabJS/AutolabJS">AutolabJS</a>.</p>
+<h2 id="commands">Commands</h2>
+<ul>
+<li><code>autolab init</code> - Initializes local repository and authenticates</li>
+<li><code>autolab exit</code> - Wipes off the credentials from the system</li>
+<li><code>autolab git create</code> - Creates a repository on Gitlab</li>
+<li><code>autolab git delete</code> - Deletes the specified repository from Gitlab</li>
+<li><code>autolab git changeserver</code> - To change the host of the gitlab server</li>
+<li><code>autolab git changelang</code> - To change the language of the code submission</li>
+<li><code>autolab git push</code> - Adds, commits, pushes the code</li>
+<li><code>autolab submit</code> -  To submit the code to JavaAutolab and fetch the results</li>
+<li><code>autolab exit</code> - Print help manual</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<pre><code>npm install -g autolabcli
+</code></pre>
+
+<h2 id="screenshot">Screenshot</h2>
+<p><img alt="autolab-screenshot" src="https://cloud.githubusercontent.com/assets/13795788/21156451/e1d7cf04-c19b-11e6-9174-593ab68be76a.png" /></p>
+<h2 id="license">License</h2>
+<p>GNU General Public License</p>
                 
                   
                 
@@ -1073,7 +1114,7 @@ Before each commit, a committer runs <a href="http://eslint.org/">ESLint</a>, <a
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Product-Features/" title="Product Features" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../autolabcli/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1082,19 +1123,19 @@ Before each commit, a committer runs <a href="http://eslint.org/">ESLint</a>, <a
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Product Features
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="../autolabcli/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../docs/" title="Documentation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Home
+                Documentation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
