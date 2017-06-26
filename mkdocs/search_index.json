@@ -666,9 +666,34 @@
             "title": "Post lab self evaluation"
         },
         {
+            "location": "/Product-Features/",
+            "text": "A summary of project features are:\n\n\n\n\nAuto-evaluation support for programming labs.\n\n\nSupport for multiple languages. The languages supported are: C, C++, Java, Python.\n\n\nAutomated score board listing maximum marks for each of students.\n\n\nUses Gitlab to provide \ngit\n version control to students.\n\n\nUses Docker containers to separate the Autolab components.\n\n\nSupport for unit / integration / functional and Input-Output testing strategies.\n\n\nAnsible-based auto configuration and installation procedure.\n\n\nOn demand auto re-evaluation for instructors.\n (this feature needs bug fixing)\n\n\n\n\nScreenshots\n\n\nA few screenshots of the project.\n\n\nMain page\n\n\n\n\nEvaluation Request\n\n\n\n\nScoreboard",
+            "title": "Product Features"
+        },
+        {
+            "location": "/Product-Features/#screenshots",
+            "text": "A few screenshots of the project.",
+            "title": "Screenshots"
+        },
+        {
+            "location": "/Product-Features/#main-page",
+            "text": "",
+            "title": "Main page"
+        },
+        {
+            "location": "/Product-Features/#evaluation-request",
+            "text": "",
+            "title": "Evaluation Request"
+        },
+        {
+            "location": "/Product-Features/#scoreboard",
+            "text": "",
+            "title": "Scoreboard"
+        },
+        {
             "location": "/AutolabJS-coding-standards/",
             "text": "Adherence to the following coding standards would be good.\n\n\n\n\nWhat counts finally are the \nTested Features in Use\n. \n\n\nThree values of any software are: features, simple design and feedback. Testing is the only way to simplify the design. So consider improvement in all the three values.    \n\n\nA stable release is mandatory for stable and predictable end-user installation.    \n\n\nDesign and code should clearly articulate the interactions / stories / metaphors of the problem domain. PRACTICE DESIGN and IMPLEMENTATION in DOMAIN.    \n\n\nAdherence to java script coding standards as prescribed by eminent authorities.\n\n\nJava Script : The Good Parts, \nDouglas Crockford\n / \nEloquent Javascript\n, Marijn Haverbeke.  \n\nBefore each commit, a committer runs \nESLint\n, \nJSHint\n and \nJSLint Errors\n on the code-base and fixes all the error and warning messages. \n\n\nShell scripts : Shell script coding standard by \nKfir Lavi\n and \nRobert Muth\n. Before each commit, a committer runs \nshellcheck\n on the code-base and fixes all the error and warning messages.    \n\n\n\n\n\n\nAll the new code commits shall have at least the unit tests. For JS, use \nmochai\n and \nchai\n. For shell script, use \nBats\n.    \n\n\nCreation and adherence to coding standard checklist. At the moment, we are following the \nproject checklist\n from MIT course, \n6.170 Software Studio\n\n\nAn issue reported should have a detailed bug report that can help replicate the problem.\n\n\nAlways maintain clean separation of coding, testing, integration, deployment and production stages. \n\n\nNEVER EVER CODE ON THE PRODUCTION SYSTEM\n.\n\n\n\n\n\n\n\n\nReferences\n\n\n\n\nRTF : A Metric Leading to Agility\n, Ron Jeffries.\n\n\nMeasuring Agile Projects Using Running Tested Features Metrics\n, Priyanjana Deb and Abhik Datta\n\n\nThe Joel Test: 12 steps to Better Code\n, Joel Spolsky    \n\n\nBrian W Kernighan on Testing\n    \n\n\nWorse is Better\n \nHistory\n    \n\n\nTwelve-factor apps\n    \n\n\nAgile Manifesto\n    \n\n\nSoftware project best practices checklist\n, Krist\u00f3f KOV\u00c1CS\n\n\nDevelopment process - \nMike Perks @ IBM\n     \n\n\nJB Rainsberger - \nAn introduction to Agile Software Development\n, \nEconomics of Software Design\n    \n\n\nCI best practices check list - Piotr Oktaba",
-            "title": "AutloabJS Coding Standards"
+            "title": "Coding Standards"
         },
         {
             "location": "/AutolabJS-coding-standards/#references",
@@ -677,8 +702,38 @@
         },
         {
             "location": "/autolabcli/",
-            "text": "AutolabCLI",
-            "title": "AutolabCLI"
+            "text": "Link to AutolabCLI -  \nAutolabCLI",
+            "title": "Home"
+        },
+        {
+            "location": "/Autolabclireadme/",
+            "text": "AutoLab CLI\n\n\n \n \n    \n\n\nA client command line interface for submissions to \nAutolabJS\n.\n\n\nCommands\n\n\n\n\nautolab init\n - Initializes local repository and authenticates\n\n\nautolab exit\n - Wipes off the credentials from the system\n\n\nautolab git create\n - Creates a repository on Gitlab\n\n\nautolab git delete\n - Deletes the specified repository from Gitlab\n\n\nautolab git changeserver\n - To change the host of the gitlab server\n\n\nautolab git changelang\n - To change the language of the code submission\n\n\nautolab git push\n - Adds, commits, pushes the code\n\n\nautolab submit\n -  To submit the code to JavaAutolab and fetch the results\n\n\nautolab exit\n - Print help manual\n\n\n\n\nInstallation\n\n\nnpm install -g autolabcli\n\n\n\n\nScreenshot\n\n\n\n\nLicense\n\n\nGNU General Public License",
+            "title": "Student Tutorial"
+        },
+        {
+            "location": "/Autolabclireadme/#autolab-cli",
+            "text": "A client command line interface for submissions to  AutolabJS .",
+            "title": "AutoLab CLI"
+        },
+        {
+            "location": "/Autolabclireadme/#commands",
+            "text": "autolab init  - Initializes local repository and authenticates  autolab exit  - Wipes off the credentials from the system  autolab git create  - Creates a repository on Gitlab  autolab git delete  - Deletes the specified repository from Gitlab  autolab git changeserver  - To change the host of the gitlab server  autolab git changelang  - To change the language of the code submission  autolab git push  - Adds, commits, pushes the code  autolab submit  -  To submit the code to JavaAutolab and fetch the results  autolab exit  - Print help manual",
+            "title": "Commands"
+        },
+        {
+            "location": "/Autolabclireadme/#installation",
+            "text": "npm install -g autolabcli",
+            "title": "Installation"
+        },
+        {
+            "location": "/Autolabclireadme/#screenshot",
+            "text": "",
+            "title": "Screenshot"
+        },
+        {
+            "location": "/Autolabclireadme/#license",
+            "text": "GNU General Public License",
+            "title": "License"
         },
         {
             "location": "/docs/",
