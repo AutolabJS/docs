@@ -46,9 +46,13 @@ pages:
           - Input-Output (IO) tests using :
             - Source code : 'AutolabJS v0.2.0/v0.2.0-IO-Tests.md'
             - Compiled binaries : 'AutolabJS v0.2.0/v0.2.0-IO-Tests-Binaries.md'
-        - Post lab self evaluation : 'AutolabJS v0.2.0/v0.2.0-Post-lab-self-evaluation.md'
-  - AutloabJS Coding Standards : 'AutolabJS-coding-standards.md'
-  - AutolabCLI: 'autolabcli.md'
+          - Post lab self evaluation : 'AutolabJS v0.2.0/v0.2.0-Post-lab-self-evaluation.md'
+    - Product Features : 'Product-Features.md'
+  
+  - Coding Standards : 'AutolabJS-coding-standards.md'
+  - AutolabCLI: 
+    - Home : 'autolabcli.md'
+    - Student Tutorial : 'Autolabclireadme.md'
   - Documentation: 'docs.md'
   - AutolabWebsite: 'website.md'
 extra:
